@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Interstellar SeMinar: upcoming seminars, calendar, past talks and scientific organising committee.">
+<title>Interstellar SeMinar</title>
+<style>
+:root{color-scheme:dark;--bg:#17191c;--text:#eeeDE8;--muted:#b0b4ba;--line:#35393e;--accent:#c1d4cb}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.7}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.skip{position:fixed;top:-100px;left:20px;padding:10px 20px;background:var(--text);color:var(--bg);z-index:10}.skip:focus{top:10px}header{background:#1d2024;border-bottom:1px solid var(--line)}.header-inner,.container,.footer-inner{width:min(1120px,calc(100% - 80px));margin:auto}.header-inner{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:36px}.brand{font-size:21px;letter-spacing:-.6px;font-weight:550;white-space:nowrap}nav{display:flex;gap:32px;align-self:stretch}nav a{display:flex;align-items:center;position:relative;color:var(--muted);font-size:14px;min-height:48px;transition:color .15s}nav a:hover,nav a[aria-current]{color:var(--text)}nav a[aria-current]:after{content:"";position:absolute;height:2px;bottom:0;left:0;right:0;background:var(--accent)}main{min-height:calc(100svh - 215px)}.view{padding:58px 0 80px}.view[hidden]{display:none}p{margin:0 0 20px}.series-intro{color:var(--muted);font-size:15px;padding-bottom:30px;margin-bottom:40px;border-bottom:1px solid var(--line)}.kicker{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;margin:0 0 20px}h1{font-size:clamp(32px,4vw,46px);font-weight:450;line-height:1.2;letter-spacing:-1.2px;margin:0 0 22px;max-width:750px}h2{font-size:20px;line-height:1.4;font-weight:500;letter-spacing:-.3px;margin:0 0 16px}h3{font-size:16px;margin:0 0 12px;font-weight:550}.lead,.speaker{color:var(--muted);max-width:680px}.speaker{font-size:17px;margin:0}.talk{display:grid;grid-template-columns:minmax(0,1fr) 270px;column-gap:70px;row-gap:34px}.talk-heading{grid-column:1;grid-row:1}.abstract{grid-column:1;grid-row:2;max-width:65ch}.abstract p{color:var(--muted);margin:0}.practical{grid-column:2;grid-row:1 / span 2;border-left:1px solid var(--line);padding-left:30px;align-self:start}.practical h2{font-size:16px;margin:0 0 23px}.details{margin:0;display:grid;gap:20px}.details dt{font-size:12px;color:var(--muted);margin-bottom:4px}.details dd{margin:0;font-size:15px}.text-link{color:var(--accent);display:inline-block;font-size:14px;text-decoration:underline;text-underline-offset:5px;padding:10px 0;margin-top:20px}.following{border-top:1px solid var(--line);margin-top:60px;padding-top:28px;display:flex;justify-content:space-between;gap:30px}.following h2{font-size:18px;margin-bottom:8px}.following p{font-size:15px;color:var(--muted);margin:0}.following .text-link{margin:0;align-self:start;white-space:nowrap}.empty,.committee,.restricted{border-top:1px solid var(--line);margin-top:35px;padding:30px 0;color:var(--muted)}.empty strong{display:block;color:var(--text);font-size:18px;font-weight:500;margin-bottom:8px}.empty p,.committee p{margin:0}.restricted{max-width:680px}.restricted h2,.committee h2{color:var(--text)}.restricted small{display:block;font-size:14px}.restricted p{max-width:60ch}footer{border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:30px;padding:28px 0}.footer-brand{font-size:14px;margin:0 0 5px}.footer-caption,.contact{font-size:13px;color:var(--muted);margin:0}.contact strong{color:var(--text);display:block;font-weight:500;margin-bottom:5px}.contact p{margin:0}.contact{text-align:right}h1:focus{outline:none}@media(max-width:760px){.header-inner,.container,.footer-inner{width:calc(100% - 40px)}.header-inner{flex-wrap:wrap;gap:0;padding-top:20px}.brand{font-size:20px}nav{width:100%;gap:0;justify-content:space-between;margin-top:10px}nav a{font-size:13px;padding:13px 0}.view{padding:32px 0 48px}.series-intro{padding-bottom:24px;margin-bottom:28px}.talk{grid-template-columns:1fr;gap:28px}.talk-heading{grid-row:1}.practical{grid-column:1;grid-row:2;border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.practical h2{margin-bottom:18px}.details{grid-template-columns:1fr 1fr;gap:18px}.abstract{grid-row:3}.practical .text-link{margin-top:10px}.following{margin-top:40px;flex-direction:column;gap:10px}.footer-inner{flex-direction:column;gap:20px}.contact{text-align:left}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* More breathing room around the featured seminar. */
+.view{padding-top:72px;padding-bottom:100px}
+.series-intro{padding-bottom:32px;margin-bottom:62px}
+.talk{grid-template-columns:minmax(0,1fr) 230px;column-gap:110px;row-gap:58px}
+.talk-heading h1{margin-bottom:30px;font-size:clamp(32px,3.5vw,42px);line-height:1.3}
+.kicker{margin-bottom:25px}
+.abstract{max-width:58ch}
+.abstract h2{margin-bottom:22px}
+.abstract p{line-height:1.85}
+.practical{padding-left:32px}
+.practical h2{margin-bottom:30px}
+.details{gap:28px}
+.following{margin-top:96px;padding-top:34px}
+@media(max-width:900px) and (min-width:761px){.talk{column-gap:55px;grid-template-columns:minmax(0,1fr) 220px}}
+@media(max-width:760px){.view{padding-top:38px;padding-bottom:64px}.series-intro{margin-bottom:40px;padding-bottom:28px}.talk{grid-template-columns:1fr;row-gap:40px}.talk-heading h1{margin-bottom:24px}.practical{padding:28px 0 0}.practical h2{margin-bottom:24px}.details{gap:22px}.following{margin-top:60px;padding-top:28px}}
+
+/* Framed seminar layout, with generous internal spacing. */
+.talk{display:block;padding:40px;background:#1c1f23;border:1px solid var(--line);border-radius:9px}
+.talk-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:30px}
+.talk-top .kicker{margin:0}
+.status{font-size:12px;color:var(--muted);border:1px solid #454b51;border-radius:20px;padding:4px 12px;white-space:nowrap}
+.talk h1{font-size:clamp(28px,3.3vw,38px);margin-bottom:20px}
+.talk .speaker{margin-bottom:34px}
+.talk .details{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:25px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:34px}
+.talk .abstract{max-width:65ch}
+.talk .abstract h3{font-size:17px;margin-bottom:16px}
+@media(max-width:760px){.talk{padding:24px}.talk-top{gap:12px;flex-wrap:wrap;margin-bottom:26px}.talk .details{grid-template-columns:1fr;gap:20px}.talk .speaker{margin-bottom:28px}}
+
+/* Compact, readable introduction to the seminar series. */
+.series-intro{max-width:560px;font-size:20px;line-height:1.75;color:var(--text);padding-bottom:0;border-bottom:0;margin:0 0 64px;text-wrap:pretty}
+@media(max-width:760px){.series-intro{max-width:100%;font-size:18px;line-height:1.75;margin-bottom:44px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Skip to content</a>
+<header><div class="header-inner"><a class="brand" href="#home">Interstellar SeMinar</a><nav aria-label="Main navigation"><a href="#home" aria-current="page">Home</a><a href="#calendar">Calendar</a><a href="#past-talks">Recordings</a><a href="#soc">Committee</a></nav></div></header>
+<main class="container" id="main-content" tabindex="-1">
+<section class="view" id="home" aria-labelledby="home-title">
+<p class="series-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<article class="talk" aria-labelledby="home-title"><div class="talk-top"><p class="kicker">Upcoming talk</p><span class="status">To be announced</span></div><h1 id="home-title" tabindex="-1">Talk title to be announced</h1><p class="speaker">Speaker and affiliation to be announced</p><dl class="details"><div><dt>Date</dt><dd>To be confirmed</dd></div><div><dt>Time &amp; time zone</dt><dd>To be confirmed</dd></div><div><dt>Location</dt><dd>To be confirmed</dd></div></dl><div class="abstract"><h3>Abstract</h3><p>The abstract of the upcoming seminar will appear here.</p></div></article>
+<div class="following"><div><h2>Coming up</h2><p>Further seminar dates will be announced soon.</p></div><a class="text-link" href="#calendar">Full programme</a></div>
+</section>
+<section class="view" id="calendar" aria-labelledby="calendar-title" hidden><p class="kicker">Schedule</p><h1 id="calendar-title" tabindex="-1">Calendar</h1><p class="lead">Upcoming seminars, listed in date order.</p><div class="empty"><strong>Seminar dates to be announced</strong><p>The programme will be listed by month as talks are confirmed.</p></div></section>
+<section class="view" id="past-talks" aria-labelledby="past-title" hidden><p class="kicker">Video repository</p><h1 id="past-title" tabindex="-1">Recordings</h1><p class="lead">Recordings of previous Interstellar SeMinar talks.</p><div class="restricted"><h2>Member access</h2><p>The video repository will be available to authorised participants.</p><small>Member sign-in will be available when the first recordings are published.</small></div></section>
+<section class="view" id="soc" aria-labelledby="soc-title" hidden><p class="kicker">SOC</p><h1 id="soc-title" tabindex="-1">Scientific Organising Committee</h1><p class="lead">The team behind Interstellar SeMinar.</p><div class="committee"><h2>Committee members</h2><p>Names and affiliations to be announced.</p></div></section>
+<noscript><p>Please enable JavaScript to navigate between the pages in this preview.</p></noscript>
+</main>
+<footer><div class="footer-inner"><div><p class="footer-brand">Interstellar SeMinar</p><p class="footer-caption">A seminar series on the interstellar medium.</p></div><div class="contact"><strong>Contact</strong><p>Contact email to be added</p></div></div></footer>
+<script>
+// Local preview navigation. Protected recordings must be served by an authenticated
+// hosting service; do not embed private video URLs or credentials in this file.
+(()=>{const pages=[...document.querySelectorAll('.view')];const links=[...document.querySelectorAll('nav a')];function render(focus=false){const requested=location.hash.slice(1)||'home';const id=pages.some(p=>p.id===requested)?requested:'home';for(const page of pages)page.hidden=page.id!==id;for(const link of links){if(link.hash==='#'+id)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')}document.title=(id==='home'?'':({calendar:'Calendar','past-talks':'Recordings',soc:'Committee'}[id]+' | '))+'Interstellar SeMinar';if(focus){document.querySelector('#'+id+' h1').focus({preventScroll:true});window.scrollTo(0,0)}}window.addEventListener('hashchange',()=>{if(location.hash!=='#main-content')render(true)});render()})();
+</script>
+</body></html>
