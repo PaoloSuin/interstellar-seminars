@@ -38,6 +38,24 @@
 /* Compact, readable introduction to the seminar series. */
 .series-intro{max-width:560px;font-size:20px;line-height:1.75;color:var(--text);padding-bottom:0;border-bottom:0;margin:0 0 64px;text-wrap:pretty}
 @media(max-width:760px){.series-intro{max-width:100%;font-size:18px;line-height:1.75;margin-bottom:44px}}
+
+/* Committee: responsive, framed member profiles. */
+.committee-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:38px}
+.member-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:32px;background:#1c1f23;border:1px solid var(--line);border-radius:9px}
+.member-top{display:flex;align-items:center;gap:22px;margin-bottom:24px;width:100%}
+.member-portrait{flex:0 0 104px;width:104px;height:104px;border:2px solid #53635d;border-radius:50%;overflow:hidden;background:#29332f;position:relative;display:grid;place-items:center}
+.member-portrait img{display:block;width:100%;height:100%;object-fit:cover}
+.member-portrait.juan img{object-position:57% 35%;transform:scale(1.6)}
+.member-initials{color:var(--accent);font-size:30px;letter-spacing:1px}
+.member-card h2{font-size:24px;line-height:1.25;margin:0 0 8px;color:var(--text)}
+.member-affiliation{font-size:15px;line-height:1.5;color:var(--accent);margin:0}
+.member-role{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 16px}
+.member-research{font-size:15px;line-height:1.7;color:var(--muted);margin:0 0 24px}
+.member-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);width:100%}
+.member-links a{color:var(--accent);font-size:14px;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.member-top{flex-direction:column;align-items:flex-start}}
+@media(max-width:620px){.committee-grid{grid-template-columns:1fr;gap:20px}.member-card{padding:26px}.member-top{flex-direction:row;gap:18px}.member-portrait{flex-basis:84px;width:84px;height:84px}.member-card h2{font-size:22px}}
+@media(max-width:360px){.member-top{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -50,7 +68,28 @@
 </section>
 <section class="view" id="calendar" aria-labelledby="calendar-title" hidden><p class="kicker">Schedule</p><h1 id="calendar-title" tabindex="-1">Calendar</h1><p class="lead">Upcoming seminars, listed in date order.</p><div class="empty"><strong>Seminar dates to be announced</strong><p>The programme will be listed by month as talks are confirmed.</p></div></section>
 <section class="view" id="past-talks" aria-labelledby="past-title" hidden><p class="kicker">Video repository</p><h1 id="past-title" tabindex="-1">Recordings</h1><p class="lead">Recordings of previous Interstellar SeMinar talks.</p><div class="restricted"><h2>Member access</h2><p>The video repository will be available to authorised participants.</p><small>Member sign-in will be available when the first recordings are published.</small></div></section>
-<section class="view" id="soc" aria-labelledby="soc-title" hidden><p class="kicker">SOC</p><h1 id="soc-title" tabindex="-1">Scientific Organising Committee</h1><p class="lead">The team behind Interstellar SeMinar.</p><div class="committee"><h2>Committee members</h2><p>Names and affiliations to be announced.</p></div></section>
+<section class="view" id="soc" aria-labelledby="soc-title" hidden><p class="kicker">SOC</p><h1 id="soc-title" tabindex="-1">Scientific Organising Committee</h1><p class="lead">The team behind Interstellar SeMinar.</p><div class="committee-grid">
+<article class="member-card" aria-labelledby="member-kate">
+<div class="member-top"><div class="member-portrait kate" role="img" aria-label="Kate Pattle"><img src="kate-pattle.png" alt="Kate Pattle" loading="lazy" decoding="async"></div><div><h2 id="member-kate">Kate Pattle</h2><p class="member-affiliation">University College London<br>Department of Physics and Astronomy</p></div></div>
+<p class="member-role">Royal Society University Research Fellow</p><p class="member-research">Magnetic fields in star-forming clouds and dense cores, studied through submillimetre and far-infrared dust polarimetry.</p>
+<div class="member-links"><a href="https://katepattle.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Kate Pattle: website">Website ↗</a><a href="https://orcid.org/0000-0002-8557-3582" target="_blank" rel="noopener noreferrer" aria-label="Kate Pattle: ORCID profile">ORCID ↗</a></div>
+</article>
+<article class="member-card" aria-labelledby="member-juan">
+<div class="member-top"><div class="member-portrait juan" role="img" aria-label="Juan Soler"><img src="juan-soler.jpg" alt="Juan Soler" loading="lazy" decoding="async"></div><div><h2 id="member-juan">Juan Soler</h2><p class="member-affiliation">University of Vienna<br>Department of Astronomy</p></div></div>
+<p class="member-role">Scientific researcher</p><p class="member-research">Structure of the interstellar medium and the physical processes shaping Galactic gas and dust, using observations, simulations and statistical tools.</p>
+<div class="member-links"><a href="https://juandiegosoler.com/" target="_blank" rel="noopener noreferrer" aria-label="Juan Soler: website">Website ↗</a><a href="https://orcid.org/0000-0002-0294-4465" target="_blank" rel="noopener noreferrer" aria-label="Juan Soler: ORCID profile">ORCID ↗</a></div>
+</article>
+<article class="member-card" aria-labelledby="member-jack">
+<div class="member-top"><div class="member-portrait jack" role="img" aria-label="Jack Berat"><img src="jack-berat.jpg" alt="Jack Berat" loading="lazy" decoding="async"></div><div><h2 id="member-jack">Jack Berat</h2><p class="member-affiliation">CEA Paris-Saclay<br>ERC ECOGAL</p></div></div>
+<p class="member-role">Postdoctoral researcher</p><p class="member-research">Magnetised interstellar turbulence, radio polarisation and Faraday tomography, connecting numerical models with observations.</p>
+<div class="member-links"><a href="https://jackberat.fr/" target="_blank" rel="noopener noreferrer" aria-label="Jack Berat: website">Website ↗</a><a href="https://orcid.org/0009-0003-6383-6614" target="_blank" rel="noopener noreferrer" aria-label="Jack Berat: ORCID profile">ORCID ↗</a></div>
+</article>
+<article class="member-card" aria-labelledby="member-paolo">
+<div class="member-top"><div class="member-portrait paolo" role="img" aria-label="Paolo Suin"><span class="member-initials" aria-hidden="true">PS</span><img src="paolo-suin.jpg" alt="Paolo Suin" loading="lazy" decoding="async" style="position:absolute;inset:0" onerror="this.hidden=true;this.style.display='none'"></div><div><h2 id="member-paolo">Paolo Suin</h2><p class="member-affiliation">CEA Paris-Saclay<br>IRFU · Département d’Astrophysique</p></div></div>
+<p class="member-role">Postdoctoral researcher</p><p class="member-research">Numerical simulations of star formation, stellar feedback and filamentary clouds, with close comparisons to observations.</p>
+<div class="member-links"><a href="https://paolosuin.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Paolo Suin: website">Website ↗</a><a href="https://orcid.org/0000-0001-7044-3809" target="_blank" rel="noopener noreferrer" aria-label="Paolo Suin: ORCID profile">ORCID ↗</a></div>
+</article>
+</div></section>
 <noscript><p>Please enable JavaScript to navigate between the pages in this preview.</p></noscript>
 </main>
 <footer><div class="footer-inner"><div><p class="footer-brand">Interstellar SeMinar</p><p class="footer-caption">A seminar series on the interstellar medium.</p></div><div class="contact"><strong>Contact</strong><p>Contact email to be added</p></div></div></footer>
