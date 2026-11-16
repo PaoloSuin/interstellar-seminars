@@ -5,7 +5,7 @@ const images = {
   uv: 'image/m31/m31_uv.jpg',
   radio: 'image/m31/m31_radio.jpg',
   xray: 'image/m31/m31_xray.jpg',
-  composite: 'image/m31/m31_composite.jpg'
+  composite: 'image/m31/m31.jpg'
 };
 
 export function initBackground() {
