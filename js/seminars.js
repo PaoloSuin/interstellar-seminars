@@ -133,11 +133,16 @@ function showFeatured(event) {
       .filter(Boolean)
       .join(' · ') || 'Speaker to be announced';
 
-  get('featured-date').textContent = niceDate(event.date);
-  get('featured-time').textContent = timeLabel(event);
-
-  get('featured-location').textContent =
-    event.location || 'To be confirmed';
+  get('featured-date').textContent =
+    event.date ? niceDate(event.date) : 'To be announced';
+  
+  get('featured-timezone').textContent =
+    event.timezone === 'Europe/Paris'
+      ? 'CET/CEST (Paris)'
+      : event.timezone || 'CET/CEST (Paris)';
+  
+  get('featured-time').textContent =
+    event.time || 'To be announced';
 
   get('featured-abstract').textContent =
     event.abstract ||
@@ -162,11 +167,11 @@ function showToBeAnnounced() {
   get('featured-speaker').textContent =
     'Speaker and affiliation to be announced';
 
-  get('featured-date').textContent = 'To be confirmed';
-
-  get('featured-time').textContent = 'To be confirmed';
-
-  get('featured-location').textContent = 'To be confirmed';
+  get('featured-date').textContent = 'To be announced';
+  
+  get('featured-timezone').textContent = 'CET/CEST (Paris)';
+  
+  get('featured-time').textContent = 'To be announced';
 
   get('featured-abstract').textContent =
     'The abstract of the upcoming seminar will appear here.';
