@@ -10,7 +10,33 @@
 </head>
 <body>
   <a class="skip" href="#main-content">Skip to content</a>
-  <header><div class="header-inner"><a class="brand" href="#home">Interstellar SeMinar</a><nav aria-label="Main navigation"><a href="#home" aria-current="page">Home</a><a href="#calendar">Calendar</a><a href="#past-talks">Recordings</a><a href="#soc">Committee</a></nav></div></header>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#home">Interstellar SeMinar</a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home" aria-current="page">Home</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#past-talks">Recordings</a>
+      <a href="#soc">Committee</a>
+    </nav>
+
+    <div class="wavelength-selector">
+      <select id="wavelength-select"
+              aria-label="Andromeda background wavelength">
+        <option value="optical">Optical</option>
+        <option value="infrared">Infrared</option>
+        <option value="uv">UV</option>
+        <option value="radio">Radio</option>
+        <option value="xray">X-ray</option>
+        <option value="composite">Composite</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<div class="galaxy-background" aria-hidden="true"></div>
   <main class="container" id="main-content" tabindex="-1">
     <section class="view" id="home" aria-labelledby="home-title">
       <article class="talk" aria-labelledby="home-title" id="featured-talk">
