@@ -297,3 +297,81 @@ footer {
     font-size: 11px;
   }
 }
+
+
+
+
+
+/* ==========================================
+   Typography improvements
+   ========================================== */
+
+/* General text */
+body {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Navigation */
+nav a {
+  font-size: 15px;
+}
+
+/* Featured seminar */
+.featured-presenter p {
+  font-size: 18px;
+}
+
+.talk .details dd {
+  font-size: 17px;
+}
+
+.talk .abstract p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Calendar and past seminars */
+.seminar-card .speaker,
+.seminar-card .abstract-text {
+  font-size: 17px;
+}
+
+.seminar-card .seminar-meta {
+  font-size: 15px;
+}
+
+/* Committee */
+.member-affiliation {
+  font-size: 16px;
+}
+
+.member-role,
+.member-research {
+  font-size: 17px;
+}
+
+.member-links a {
+  font-size: 15px;
+}
+
+/* Footer */
+.footer-caption,
+.contact {
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  body {
+    font-size: 17px;
+  }
+
+  .talk .abstract p {
+    font-size: 17px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
