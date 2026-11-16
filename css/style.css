@@ -160,21 +160,37 @@ body {
   isolation: isolate;
 }
 
-/* Large, faint galaxy behind the website */
+
+/* Andromeda background */
+
+body {
+  background: #17191c;
+  isolation: auto;
+}
 
 .galaxy-background {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
 
   background-image: url("../image/m31/m31_optical.jpg");
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 
-  opacity: 0.18;
+  opacity: 0.22;
   pointer-events: none;
 }
+
+/* Keep website content above the galaxy */
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* ==========================================
    Small wavelength selector in header
