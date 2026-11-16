@@ -18,7 +18,9 @@
 @media(max-width:760px){.view{padding-top:38px;padding-bottom:64px}.series-intro{margin-bottom:40px;padding-bottom:28px}.talk{grid-template-columns:1fr;row-gap:40px}.talk-heading h1{margin-bottom:24px}.practical{padding:28px 0 0}.practical h2{margin-bottom:24px}.details{gap:22px}.following{margin-top:60px;padding-top:28px}}
 
 /* Framed seminar layout, with generous internal spacing. */
-.talk{display:block;padding:40px;background:#1c1f23;border:1px solid var(--line);border-radius:9px}
+.talk{display:block;padding:40px;
+      background: rgba(28, 31, 35, 0.88);
+      border:1px solid var(--line);border-radius:9px}
 .talk-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:30px}
 .talk-top .kicker{margin:0}
 .status{font-size:12px;color:var(--muted);border:1px solid #454b51;border-radius:20px;padding:4px 12px;white-space:nowrap}
