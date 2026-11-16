@@ -1,1 +1,44 @@
-
+{
+  "members": [
+    {
+      "id": "kate",
+      "name": "Kate Pattle",
+      "affiliation": "University College London\nDepartment of Physics and Astronomy",
+      "role": "Royal Society University Research Fellow",
+      "research": "Magnetic fields in star-forming clouds and dense cores, studied through submillimetre and far-infrared dust polarimetry.",
+      "image": "kate-pattle.png",
+      "website": "https://katepattle.github.io/",
+      "orcid": "https://orcid.org/0000-0002-8557-3582"
+    },
+    {
+      "id": "juan",
+      "name": "Juan Soler",
+      "affiliation": "University of Vienna\nDepartment of Astronomy",
+      "role": "Scientific researcher",
+      "research": "Structure of the interstellar medium and the physical processes shaping Galactic gas and dust, using observations, simulations and statistical tools.",
+      "image": "juan-soler.jpg",
+      "website": "https://juandiegosoler.com/",
+      "orcid": "https://orcid.org/0000-0002-0294-4465"
+    },
+    {
+      "id": "jack",
+      "name": "Jack Berat",
+      "affiliation": "CEA Paris-Saclay\nERC ECOGAL",
+      "role": "Postdoctoral researcher",
+      "research": "Magnetised interstellar turbulence, radio polarisation and Faraday tomography, connecting numerical models with observations.",
+      "image": "jack-berat.jpg",
+      "website": "https://jackberat.fr/",
+      "orcid": "https://orcid.org/0009-0003-6383-6614"
+    },
+    {
+      "id": "paolo",
+      "name": "Paolo Suin",
+      "affiliation": "CEA Paris-Saclay\nIRFU · Département d’Astrophysique",
+      "role": "Postdoctoral researcher",
+      "research": "Numerical simulations of star formation, stellar feedback and filamentary clouds, with close comparisons to observations.",
+      "image": "paolo-suin.jpeg",
+      "website": "https://paolosuin.github.io/",
+      "orcid": "https://orcid.org/0000-0001-7044-3809"
+    }
+  ]
+}
