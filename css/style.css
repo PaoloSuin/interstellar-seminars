@@ -107,3 +107,45 @@
     height: 84px;
   }
 }
+
+
+
+
+
+/* Featured seminar: speaker, affiliation, title */
+
+.featured-presenter {
+  margin-bottom: 32px;
+}
+
+.featured-presenter h2 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.featured-presenter p {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.talk #home-title {
+  font-size: clamp(28px, 3.3vw, 38px);
+  font-weight: 450;
+  line-height: 1.3;
+  margin: 0 0 34px;
+}
+
+@media (max-width: 760px) {
+  .featured-presenter {
+    margin-bottom: 26px;
+  }
+
+  .featured-presenter h2 {
+    font-size: 22px;
+  }
+}
