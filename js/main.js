@@ -1,5 +1,6 @@
 import { renderSeminars } from './seminars.js';
 import { renderCommittee } from './committee.js';
+import { initBackground } from './background.js';
 
 const views = [...document.querySelectorAll('.view')];
 const navLinks = [...document.querySelectorAll('nav a')];
@@ -65,3 +66,4 @@ window.addEventListener('hashchange', () => {
 });
 navigate();
 init();
+initBackground();
