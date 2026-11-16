@@ -64,6 +64,12 @@ async function init() {
 window.addEventListener('hashchange', () => {
   if (location.hash !== '#main-content') navigate(true);
 });
+// Initialise the website
 navigate();
 init();
 initBackground();
+
+// Always start at the top when opening or refreshing the page
+window.addEventListener('load', () => {
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+});
