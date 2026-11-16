@@ -154,20 +154,26 @@
 
 /* Multiwavelength Andromeda background */
 
-.galaxy-background {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-
-  background-image: url("../image/m31/m31_optical.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  opacity: 0.22;
-  pointer-events: none;
+.galaxy-layer-b {
+  z-index: 2;
 }
 
+/* Website content above the galaxy */
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-layer {
+    transition: none;
+  }
+}
 /* Keep the website above the background */
 
 header,
