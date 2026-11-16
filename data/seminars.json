@@ -1,4 +1,3 @@
-
 {
   "seminars": [
     {
@@ -10,7 +9,7 @@
       "affiliation": "",
       "title": "To be announced",
       "abstract": "The abstract of the upcoming seminar will appear here.",
-      "location": "Online",
+      "location": "",
       "meeting_url": "",
       "recording_url": "",
       "status": "tentative"
