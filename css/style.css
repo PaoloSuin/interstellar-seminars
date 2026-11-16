@@ -156,9 +156,64 @@
 
 /* Multiwavelength Andromeda background */
 
+
+/* ==========================================
+   Multiwavelength Andromeda background
+   ========================================== */
+
+.galaxy-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.galaxy-layer {
+  position: absolute;
+  inset: 0;
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.galaxy-layer-a {
+  background-image: url("../image/m31/m31_optical.jpg");
+  opacity: 1;
+  z-index: 1;
+}
+
 .galaxy-layer-b {
+  opacity: 0;
   z-index: 2;
 }
+
+/* Keep website content above the background */
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Slightly transparent seminar card */
+
+.talk {
+  background: rgba(28, 31, 35, 0.88);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-layer {
+    transition: none;
+  }
+}
+
 
 /* Website content above the galaxy */
 
