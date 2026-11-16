@@ -125,13 +125,16 @@ function showFeatured(event) {
   get('featured-status').textContent =
     event.status === 'tentative' ? 'Tentative' : 'Scheduled';
 
-  get('home-title').textContent =
-    event.title || 'Talk title to be announced';
-
   get('featured-speaker').textContent =
-    [event.speaker, event.affiliation]
-      .filter(Boolean)
-      .join(' · ') || 'Speaker to be announced';
+    event.speaker || 'Speaker to be announced';
+  
+  get('featured-affiliation').textContent =
+    event.affiliation || 'Affiliation to be announced';
+  
+  get('home-title').textContent =
+    event.title && event.title !== 'To be announced'
+      ? event.title
+      : 'Title to be announced';
 
   get('featured-date').textContent =
     event.date ? niceDate(event.date) : 'To be announced';
@@ -161,11 +164,14 @@ function showFeatured(event) {
 function showToBeAnnounced() {
   get('featured-status').textContent = 'To be announced';
 
-  get('home-title').textContent =
-    'Talk title to be announced';
-
   get('featured-speaker').textContent =
-    'Speaker and affiliation to be announced';
+    'Speaker to be announced';
+  
+  get('featured-affiliation').textContent =
+    'Affiliation to be announced';
+  
+  get('home-title').textContent =
+    'Title to be announced';
 
   get('featured-date').textContent = 'To be announced';
   
