@@ -96,17 +96,22 @@ function buildCard(event, isPast = false) {
   card.append(el(
     'h2',
     '',
-    event.title || 'Talk title to be announced'
+    event.speaker || 'Speaker to be announced'
   ));
-
+  
   card.append(el(
     'p',
     'speaker',
-    [event.speaker, event.affiliation]
-      .filter(Boolean)
-      .join(' · ') || 'Speaker to be announced'
+    event.affiliation || 'Affiliation to be announced'
   ));
-
+  
+  card.append(el(
+    'h3',
+    'seminar-title',
+    event.title && event.title !== 'To be announced'
+      ? event.title
+      : 'Title to be announced'
+  ));
   if (event.abstract)
     card.append(el('p', 'abstract-text', event.abstract));
 
