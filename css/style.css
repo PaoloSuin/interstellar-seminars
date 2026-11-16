@@ -152,21 +152,7 @@
 
 
 
-/* ==========================================
-   Multiwavelength Andromeda background
-   ========================================== */
-
-body {
-  isolation: isolate;
-}
-
-
-/* Andromeda background */
-
-body {
-  background: #17191c;
-  isolation: auto;
-}
+/* Multiwavelength Andromeda background */
 
 .galaxy-background {
   position: fixed;
@@ -175,11 +161,20 @@ body {
 
   background-image: url("../image/m31/m31_optical.jpg");
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 
   opacity: 0.22;
   pointer-events: none;
+}
+
+/* Keep the website above the background */
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* Keep website content above the galaxy */
