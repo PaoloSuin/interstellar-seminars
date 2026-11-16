@@ -204,9 +204,9 @@ const all = (
     (event) => event.status !== 'cancelled'
   );
 
-  const upcoming = active.filter(
-    (event) => event.date >= today
-  );
+const upcoming = active.filter(
+  event => !event.date || event.date >= today
+);
 
   const past = active.filter(
     (event) => event.date < today
