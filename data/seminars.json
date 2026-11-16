@@ -1,4 +1,19 @@
 
 {
-  "seminars": []
+  "seminars": [
+    {
+      "id": "marco-padovani",
+      "date": null,
+      "time": null,
+      "timezone": "Europe/Paris",
+      "speaker": "Marco Padovani",
+      "affiliation": "",
+      "title": "To be announced",
+      "abstract": "The abstract of the upcoming seminar will appear here.",
+      "location": "Online",
+      "meeting_url": "",
+      "recording_url": "",
+      "status": "tentative"
+    }
+  ]
 }
