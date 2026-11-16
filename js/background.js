@@ -53,59 +53,62 @@ export function initBackground() {
   layers[0].style.opacity = '1';
   layers[1].style.opacity = '0';
 
-  async function selectBand(band) {
-    if (!Object.hasOwn(images, band)) return;
 
-    const thisRequest = ++requestId;
+async function selectBand(band) {
+  if (!Object.hasOwn(images, band)) return;
 
-    if (band === currentBand) return;
+  const thisRequest = ++requestId;
+
+  if (band === currentBand) {
+    selector.value = band;
+    return;
+  }
+
+  try {
+    const url = await loadImage(band);
+
+    if (thisRequest !== requestId) return;
+
+    const nextLayer = 1 - activeLayer;
+    const incoming = layers[nextLayer];
+    const outgoing = layers[activeLayer];
+
+    // Prepare the incoming image.
+    incoming.style.transition = 'none';
+    incoming.style.opacity = '0';
+    incoming.style.backgroundImage = `url("${url}")`;
+
+    incoming.style.zIndex = '2';
+    outgoing.style.zIndex = '1';
+
+    // Apply the initial state.
+    void incoming.offsetWidth;
+
+    // Start the smooth crossfade.
+    incoming.style.transition = 'opacity 0.8s ease-in-out';
+    outgoing.style.transition = 'opacity 0.8s ease-in-out';
+
+    incoming.style.opacity = '1';
+    outgoing.style.opacity = '0';
+
+    activeLayer = nextLayer;
+    currentBand = band;
+    selector.value = band;
 
     try {
-      const url = await loadImage(band);
+      sessionStorage.setItem('m31-band', band);
+    } catch {
+      // Storage is optional.
+    }
 
-      // Ignore outdated requests.
-      if (thisRequest !== requestId) return;
+  } catch (error) {
+    console.error(error);
 
-      const nextLayer = 1 - activeLayer;
-
-      // Prepare the hidden layer.
-      layers[nextLayer].style.transition = 'none';
-      layers[nextLayer].style.opacity = '0';
-      layers[nextLayer].style.backgroundImage = `url("${url}")`;
-
-      // Force layout before starting the transition.
-      void layers[nextLayer].offsetWidth;
-
-      layers[nextLayer].style.transition = '';
-      layers[nextLayer].style.opacity = '1';
-
-      // The new layer is now on top.
-      layers[nextLayer].style.zIndex = '2';
-      layers[activeLayer].style.zIndex = '1';
-
-      // Fade the old layer out as well.
-      layers[activeLayer].style.opacity = '0';
-
-      activeLayer = nextLayer;
-      currentBand = band;
-
-      selector.value = band;
-
-      try {
-        sessionStorage.setItem('m31-band', band);
-      } catch {
-        // Storage is optional.
-      }
-
-    } catch (error) {
-      console.error(error);
-
-      // Restore the last working selection.
-      if (thisRequest === requestId) {
-        selector.value = currentBand;
-      }
+    if (thisRequest === requestId) {
+      selector.value = currentBand;
     }
   }
+}
 
   selector.addEventListener('change', () => {
     selectBand(selector.value);
