@@ -25,38 +25,7 @@ The site includes:
 - **Paolo Suin** — CEA Paris-Saclay
 
 Further information and links to individual profiles are available on the [Committee page](https://interstellar-seminars.com/#soc).
-
-## Repository structure
-
-```text
-interstellar-seminars/
-├── index.html          # Website structure, styles, and navigation
-├── CNAME               # Custom domain for GitHub Pages
-├── kate-pattle.png     # Committee portrait
-├── juan-soler.jpg      # Committee portrait
-├── jack-berat.jpg      # Committee portrait
-├── paolo-suin.jpeg     # Committee portrait
-└── README.md           # Project documentation
-```
-
 The site is a lightweight, static HTML website with embedded CSS and JavaScript. It does not require a build system or external JavaScript framework.
-
-## Run locally
-
-Clone the repository:
-
-```bash
-git clone https://github.com/PaoloSuin/interstellar-seminars.git
-cd interstellar-seminars
-```
-
-Then open `index.html` in a browser. Alternatively, serve it locally:
-
-```bash
-python3 -m http.server 8000
-```
-
-Visit `http://localhost:8000` to preview the site.
 
 ## Updating the website
 
