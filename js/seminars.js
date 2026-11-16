@@ -185,18 +185,20 @@ export function renderSeminars(data) {
   const timeZone = data.timezone || DEFAULT_TIMEZONE;
   const today = todayInTimezone(timeZone);
 
-  const all = (
-    Array.isArray(data) ? data : data.seminars || []
+const all = (
+  Array.isArray(data) ? data : data.seminars || []
+)
+  .filter(event =>
+    event &&
+    (!event.date ||
+      /^\d{4}-\d{2}-\d{2}$/.test(event.date))
   )
-    .filter((event) =>
-      event &&
-      /^\d{4}-\d{2}-\d{2}$/.test(event.date || '')
-    )
-    .sort((a, b) =>
-      `${a.date}T${a.time || '00:00'}`.localeCompare(
-        `${b.date}T${b.time || '00:00'}`
-      )
-    );
+  .sort((a, b) => {
+    if (!a.date) return b.date ? 1 : 0;
+    if (!b.date) return -1;
+
+    return a.date.localeCompare(b.date);
+  });
 
   const active = all.filter(
     (event) => event.status !== 'cancelled'
