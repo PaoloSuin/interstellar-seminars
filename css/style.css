@@ -149,3 +149,77 @@
     font-size: 22px;
   }
 }
+
+
+
+/* ==========================================
+   Multiwavelength Andromeda background
+   ========================================== */
+
+body {
+  isolation: isolate;
+}
+
+/* Large, faint galaxy behind the website */
+
+.galaxy-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image: url("../image/m31/m31_optical.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* ==========================================
+   Small wavelength selector in header
+   ========================================== */
+
+.header-inner {
+  gap: 24px;
+}
+
+.wavelength-selector {
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+#wavelength-select {
+  width: 105px;
+  padding: 5px 7px;
+
+  background: #252a2e;
+  color: var(--muted);
+
+  border: 1px solid var(--line);
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+#wavelength-select:hover,
+#wavelength-select:focus-visible {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+/* Mobile layout */
+
+@media (max-width: 760px) {
+  .wavelength-selector {
+    margin-left: auto;
+    margin-bottom: 8px;
+  }
+
+  #wavelength-select {
+    width: 100px;
+    font-size: 11px;
+  }
+}
