@@ -1,11 +1,11 @@
 
 const images = {
   optical: 'image/m31/m31_optical.jpg',
-  infrared: 'image/m31/m31_infrared.jpg',
-  uv: 'image/m31/m31_uv.jpg',
-  radio: 'image/m31/m31_radio.jpg',
-  xray: 'image/m31/m31_xray.jpg',
-  composite: 'image/m31/m31_composite.jpg'
+  infrared: 'image/m31/m31_infrared.tif',
+  uv: 'image/m31/m31_uv.tif',
+  radio: 'image/m31/m31_radio.tif',
+  xray: 'image/m31/m31_xray.tif',
+  composite: 'image/m31/m31.jpg'
 };
 
 export function initBackground() {
