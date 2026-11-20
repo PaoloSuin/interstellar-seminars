@@ -1,7 +1,8 @@
-
 {
   "name": "Interstellar SeMinar",
   "description": "A seminar series on the interstellar medium.",
-  "contact_email": "",
-  "timezone": "Europe/Paris"
+  "contact_emails": [
+    "paolo.suin@cea.fr",
+    "jack.berat@cea.fr"
+  ]
 }
