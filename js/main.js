@@ -34,11 +34,19 @@ function renderSite(site) {
   }
   if (site.description) document.querySelector('#site-description').textContent = site.description;
   const contact = document.querySelector('#site-contact');
-  if (site.contact_email) {
-    const link = document.createElement('a');
-    link.href = `mailto:${site.contact_email}`;
-    link.textContent = site.contact_email;
-    contact.replaceChildren(link);
+  if (site.contact_emails?.length) {
+    contact.replaceChildren();
+  
+    site.contact_emails.forEach((email, index) => {
+      if (index > 0) {
+        contact.append(document.createElement('br'));
+      }
+  
+      const link = document.createElement('a');
+      link.href = `mailto:${email}`;
+      link.textContent = email;
+      contact.append(link);
+    });
   }
 }
 
