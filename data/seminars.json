@@ -1,18 +1,19 @@
 {
+  "timezone": "Europe/Paris",
   "seminars": [
     {
       "id": "marco-padovani",
-      "date": null,
-      "time": null,
-      "timezone": "Europe/Paris",
       "speaker": "Marco Padovani",
       "affiliation": "INAF – Osservatorio Astrofisico di Arcetri, Italy",
-      "title": "To be announced",
-      "abstract": "The abstract of the upcoming seminar will appear here.",
-      "location": "",
-      "meeting_url": "",
+      "title": null,
+      "abstract": null,
+      "date": null,
+      "time": null,
+      "status": "upcoming",
+      "website": "",
+      "slides_url": "",
       "recording_url": "",
-      "status": "tentative"
+      "meeting_url": ""
     }
   ]
 }
