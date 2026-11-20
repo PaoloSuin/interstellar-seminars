@@ -1,6 +1,11 @@
 {
   "timezone": "Europe/Paris",
   "seminars": [
+
+
+
+
+    
     {
       "id": "marco-padovani",
       "speaker": "Marco Padovani",
@@ -14,11 +19,7 @@
       "slides_url": "",
       "recording_url": "",
       "meeting_url": ""
-    }
-  ]
-}
-
-
+    },
 
 {
   "id": "test",
@@ -33,3 +34,13 @@
   "meeting_url": "",
   "recording_url": "https://drive.google.com/file/d/EXAMPLE/view"
 }
+
+
+
+
+    
+  ]
+}
+
+
+
