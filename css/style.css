@@ -375,3 +375,21 @@ nav a {
     font-size: 14px;
   }
 }
+
+
+
+
+/* Contact email links */
+
+.contact-link {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
