@@ -1,77 +1,347 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Interstellar SeMinar: upcoming seminars, calendar, past talks and scientific organising committee.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Interstellar SeMinar: upcoming seminars, calendar, recordings and scientific organising committee."
+  >
+
   <title>Interstellar SeMinar</title>
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Main JavaScript module -->
   <script type="module" src="js/main.js"></script>
 </head>
+
 <body>
-  <a class="skip" href="#main-content">Skip to content</a>
 
-<header>
-  <div class="header-inner">
-    <a class="brand" href="#home">Interstellar SeMinar</a>
+  <!-- Accessibility -->
+  <a class="skip" href="#main-content">
+    Skip to content
+  </a>
 
-    <nav aria-label="Main navigation">
-      <a href="#home" aria-current="page">Home</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#past-talks">Recordings</a>
-      <a href="#soc">Committee</a>
-    </nav>
+  <!-- ==========================================
+       Header and navigation
+       ========================================== -->
 
-    <div class="wavelength-selector">
-      <select id="wavelength-select"
-              aria-label="Andromeda background wavelength">
-        <option value="optical">Optical</option>
-        <option value="infrared">Infrared</option>
-        <option value="uv">UV</option>
-        <option value="radio">Radio</option>
-        <option value="xray">X-ray</option>
-        <option value="composite">Composite</option>
-      </select>
+  <header>
+    <div class="header-inner">
+
+      <a class="brand" href="#home">
+        Interstellar SeMinar
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#past-talks">Recordings</a>
+        <a href="#soc">Committee</a>
+      </nav>
+
+      <!-- Multiwavelength Andromeda selector -->
+      <div class="wavelength-selector">
+
+        <select
+          id="wavelength-select"
+          aria-label="Andromeda background wavelength"
+        >
+          <option value="optical">Optical</option>
+          <option value="infrared">Infrared</option>
+          <option value="uv">UV</option>
+          <option value="radio">Radio</option>
+          <option value="xray">X-ray</option>
+          <option value="composite">Composite</option>
+        </select>
+
+      </div>
+
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="galaxy-background" aria-hidden="true">
-  <div class="galaxy-layer galaxy-layer-a"></div>
-  <div class="galaxy-layer galaxy-layer-b"></div>
-</div>
-  <main class="container" id="main-content" tabindex="-1">
-    <section class="view" id="home" aria-labelledby="home-title">
-      <article class="talk" aria-labelledby="home-title" id="featured-talk">
-        <div class="talk-top"><p class="kicker">Upcoming talk</p><span class="status" id="featured-status">To be announced</span></div>
+  <!-- ==========================================
+       Multiwavelength Andromeda background
+       ========================================== -->
+
+  <div class="galaxy-background" aria-hidden="true">
+    <div class="galaxy-layer galaxy-layer-a"></div>
+    <div class="galaxy-layer galaxy-layer-b"></div>
+  </div>
+
+  <!-- ==========================================
+       Main content
+       ========================================== -->
+
+  <main
+    class="container"
+    id="main-content"
+    tabindex="-1"
+  >
+
+    <!-- ========================================
+         HOME — Featured upcoming seminar
+         ======================================== -->
+
+    <section
+      class="view"
+      id="home"
+      aria-labelledby="home-title"
+    >
+
+      <article
+        class="talk"
+        id="featured-talk"
+        aria-labelledby="home-title"
+      >
+
+        <!-- Speaker and affiliation -->
         <div class="featured-presenter">
-          <h2 id="featured-speaker">Speaker to be announced</h2>
-          <p id="featured-affiliation">Affiliation to be announced</p>
+
+          <h2 id="featured-speaker">
+            Speaker to be announced
+          </h2>
+
+          <p id="featured-affiliation">
+            Affiliation to be announced
+          </p>
+
         </div>
-        
-        <h1 id="home-title" tabindex="-1">Title to be announced</h1>
+
+        <!-- Seminar title -->
+        <h1 id="home-title" tabindex="-1">
+          Title to be announced
+        </h1>
+
+        <!-- Date, time and time zone -->
         <dl class="details">
-          <div><dt>Date</dt><dd id="featured-date">To be announced</dd></div>
-          <div><dt>Time</dt><dd id="featured-time">To be announced</dd></div>
-          <div><dt>Time zone</dt><dd id="featured-timezone">CET/CEST (Paris)</dd></div>
+
+          <div>
+            <dt>Date</dt>
+            <dd id="featured-date">
+              To be announced
+            </dd>
+          </div>
+
+          <div>
+            <dt>Time</dt>
+            <dd id="featured-time">
+              To be announced
+            </dd>
+          </div>
+
+          <div>
+            <dt>Time zone</dt>
+            <dd id="featured-timezone">
+              CET/CEST (Paris)
+            </dd>
+          </div>
+
         </dl>
-        <div class="abstract"><h3>Abstract</h3><p id="featured-abstract">The abstract of the upcoming seminar will appear here.</p></div>
-        <div class="seminar-actions" id="featured-actions"></div>
+
+        <!-- Abstract -->
+        <div class="abstract">
+
+          <h3>Abstract</h3>
+
+          <p id="featured-abstract">
+            The abstract of the upcoming seminar will appear here.
+          </p>
+
+        </div>
+
+        <!-- Meeting and other links -->
+        <div
+          class="seminar-actions"
+          id="featured-actions"
+        ></div>
+
       </article>
-      <div class="following"><div><h2>Coming up</h2><p id="following-text">Further seminar dates will be announced soon.</p></div><a class="text-link" href="#calendar">Full programme</a></div>
+
+      <!-- Additional upcoming seminars -->
+      <div class="following">
+
+        <div>
+          <h2>Coming up</h2>
+
+          <p id="following-text">
+            Further seminar dates will be announced soon.
+          </p>
+        </div>
+
+        <a class="text-link" href="#calendar">
+          Full programme
+        </a>
+
+      </div>
+
     </section>
-    <section class="view" id="calendar" aria-labelledby="calendar-title" hidden>
-      <div id="calendar-content"><div class="empty"><strong>Seminar dates to be announced</strong><p>The programme will be listed by month as talks are confirmed.</p></div></div>
+
+    <!-- ========================================
+         CALENDAR — Upcoming seminar directory
+         ======================================== -->
+
+    <section
+      class="view"
+      id="calendar"
+      aria-labelledby="calendar-title"
+      hidden
+    >
+
+      <p class="kicker">Schedule</p>
+
+      <h1 id="calendar-title" tabindex="-1">
+        Calendar
+      </h1>
+
+      <p class="lead">
+        Upcoming seminars, listed in programme order.
+      </p>
+
+      <!-- Populated by js/seminars.js -->
+      <div id="calendar-content">
+
+        <div class="empty">
+          <strong>
+            Seminar dates to be announced
+          </strong>
+
+          <p>
+            The programme will be listed as talks are confirmed.
+          </p>
+        </div>
+
+      </div>
+
     </section>
-    <section class="view" id="past-talks" aria-labelledby="past-title" hidden>
+
+    <!-- ========================================
+         RECORDINGS — Timeline archive
+         ======================================== -->
+
+    <section
+      class="view"
+      id="past-talks"
+      aria-labelledby="past-title"
+      hidden
+    >
+
+      <h1 id="past-title" tabindex="-1">
+        Recordings
+      </h1>
+
+      <p class="lead">
+        Recordings of previous Interstellar SeMinar talks.
+      </p>
+
+      <!--
+        Populated automatically by js/seminars.js.
+
+        Only past seminars with a valid recording_url
+        are displayed.
+
+        Entries are grouped by year and ordered
+        from newest to oldest.
+      -->
       <div id="past-content"></div>
-      <div class="restricted"><h2>Member access</h2><p>The video repository will be available to authorised participants.</p><small>Member sign-in will be available when the first recordings are published.</small></div>
+
+      <!-- Recording access information -->
+      <div class="restricted">
+
+        <p>
+          Recordings are available to registered participants.
+          Please sign in with your authorised account
+          to watch them.
+        </p>
+
+      </div>
+
     </section>
-    <section class="view" id="soc" aria-labelledby="soc-title" hidden>
-      <div class="committee-grid" id="committee-grid"></div>
+
+    <!-- ========================================
+         SCIENTIFIC ORGANISING COMMITTEE
+         ======================================== -->
+
+    <section
+      class="view"
+      id="soc"
+      aria-labelledby="soc-title"
+      hidden
+    >
+
+      <p class="kicker">SOC</p>
+
+      <h1 id="soc-title" tabindex="-1">
+        Scientific Organising Committee
+      </h1>
+
+      <p class="lead">
+        The team behind Interstellar SeMinar.
+      </p>
+
+      <!-- Populated by js/committee.js -->
+      <div
+        class="committee-grid"
+        id="committee-grid"
+      ></div>
+
     </section>
-    <noscript><p>Please enable JavaScript to view seminar information and navigate this website.</p></noscript>
+
+    <!-- JavaScript fallback -->
+    <noscript>
+      <p>
+        Please enable JavaScript to view seminar information
+        and navigate this website.
+      </p>
+    </noscript>
+
   </main>
-  <footer><div class="footer-inner"><div><p class="footer-brand">Interstellar SeMinar</p><p class="footer-caption" id="site-description">A seminar series on the interstellar medium.</p></div><div class="contact"><strong>Contact</strong><p id="site-contact">Contact email to be added</p></div></div></footer>
+
+  <!-- ==========================================
+       Footer
+       ========================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div>
+
+        <p class="footer-brand">
+          Interstellar SeMinar
+        </p>
+
+        <p
+          class="footer-caption"
+          id="site-description"
+        >
+          A seminar series on the interstellar medium.
+        </p>
+
+      </div>
+
+      <div class="contact">
+
+        <strong>Contact</strong>
+
+        <!--
+          Populated from data/site.json.
+          Both email addresses become clickable.
+        -->
+        <p id="site-contact">
+          Contact email to be added
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>
