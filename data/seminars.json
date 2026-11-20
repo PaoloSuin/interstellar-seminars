@@ -17,3 +17,19 @@
     }
   ]
 }
+
+
+
+{
+  "id": "test",
+  "speaker": "test_name",
+  "affiliation": "test_inst",
+  "title": "Example seminar title",
+  "date": "2026-12-10",
+  "time": "15:00",
+  "timezone": "Europe/Paris",
+  "status": "confirmed",
+  "abstract": "Example abstract.",
+  "meeting_url": "",
+  "recording_url": "https://drive.google.com/file/d/EXAMPLE/view"
+}
