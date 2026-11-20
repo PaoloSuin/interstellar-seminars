@@ -328,74 +328,77 @@ function renderCalendar(events) {
 // Recordings: individual timeline entries
 // --------------------------------------------------
 
+
 function buildRecordingEntry(event) {
   const entry = el('article', 'recording-entry');
 
-  // Date column: large day + three-letter month.
+  // Date: day and three-letter month
   const dateBox = el('div', 'recording-date');
 
   const day = Number(event.date.slice(8, 10));
 
   dateBox.append(
+    el('span', 'recording-day', String(day).padStart(2, '0')),
+    el('span', 'recording-month', shortMonth(event.date))
+  );
+
+  const content = el('div', 'recording-content');
+
+  // Speaker
+  content.append(
     el(
-      'span',
-      'recording-day',
-      String(day).padStart(2, '0')
-    ),
-    el(
-      'span',
-      'recording-month',
-      shortMonth(event.date)
+      'h3',
+      'recording-speaker',
+      event.speaker || 'Speaker to be announced'
     )
   );
 
-  // Recording information.
-  const content = el('div', 'recording-content');
-
-  const speaker = el(
-    'h3',
-    'recording-speaker',
-    event.speaker || 'Speaker to be announced'
+  // Clickable title -> recording
+  const title = el('p', 'recording-title');
+  const titleLink = safeLink(
+    event.recording_url,
+    titleLabel(event.title),
+    'recording-title-link'
   );
 
-  const title = el(
-    'p',
-    'recording-title',
-    titleLabel(event.title)
-  );
-
-  content.append(speaker, title);
-
-  // Optional related publication.
-  if (event.publication_url) {
-    const publication = safeLink(
-      event.publication_url,
-      'Publication ↗'
-    );
-
-    if (publication) {
-      const related = el('p', 'recording-related');
-
-      related.append(
-        document.createTextNode('See also: '),
-        publication
-      );
-
-      content.append(related);
-    }
+  if (titleLink) {
+    title.append(titleLink);
+  } else {
+    title.textContent = titleLabel(event.title);
   }
 
-  // Recording link.
+  content.append(title);
+
+  // Bottom row: recording left, publication right
+  const linksRow = el('div', 'recording-links-row');
+
   const recording = safeLink(
     event.recording_url,
-    'Watch recording ↗'
+    'Watch recording ↗',
+    'recording-watch-link'
   );
 
   if (recording) {
-    const actions = el('div', 'recording-actions');
+    linksRow.append(recording);
+  }
 
-    actions.append(recording);
-    content.append(actions);
+  // Optional related publication
+  if (event.publication_url) {
+    const publication = safeLink(
+      event.publication_url,
+      'Publication ↗',
+      'recording-publication-link'
+    );
+
+    if (publication) {
+      const related = el('div', 'recording-related');
+      related.append('See also: ', publication);
+      linksRow.append(related);
+    }
+  }
+
+  if (linksRow.childElementCount) {
+    content.append(linksRow);
   }
 
   entry.append(dateBox, content);
