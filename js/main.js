@@ -37,10 +37,22 @@ function renderSite(site) {
   if (site.contact_emails?.length) {
     contact.replaceChildren();
   
-    site.contact_emails.forEach((email, index) => {
-      if (index > 0) {
-        contact.append(document.createElement('br'));
+
+    const contact = document.querySelector('#site-contact');
+    
+    if (Array.isArray(site.contact_emails)) {
+      contact.replaceChildren();
+    
+      for (const email of site.contact_emails) {
+        const link = document.createElement('a');
+    
+        link.href = `mailto:${email}`;
+        link.textContent = email;
+        link.className = 'contact-link';
+    
+        contact.append(link);
       }
+    }
   
       const link = document.createElement('a');
       link.href = `mailto:${email}`;
